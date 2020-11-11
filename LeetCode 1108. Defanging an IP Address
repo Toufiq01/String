@@ -2,7 +2,7 @@ class Solution {
     public String defangIPaddr(String address) {
         int n =address.length();
         int j=0;
-        char[] result = new char[n+6]; //  other wise output takes one more null
+        char[] result = new char[n+6]; //  otherwise output takes one more null
         for(int i=0; i< n; i++){
             if( address.charAt(i) == '.'){
                 result[j++] = '[';
