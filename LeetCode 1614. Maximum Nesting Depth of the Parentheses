@@ -1,0 +1,11 @@
+class Solution {
+    public int maxDepth(String s) {
+        int count =0, maxDepth = Integer.MIN_VALUE;
+        for(char element : s.toCharArray()){
+            if(element == '(') count++;
+            else if (element == ')') count--;
+            maxDepth = Math.max(count, maxDepth);
+        }
+        return maxDepth;
+    }
+}
