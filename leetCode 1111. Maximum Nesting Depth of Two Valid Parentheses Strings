@@ -1,0 +1,33 @@
+class Solution {
+    public int[] maxDepthAfterSplit(String seq) {
+        int n = seq.length();
+        int[] result = new int[n];
+        for(int i=0; i<n; i++){
+            result[i] = (seq.charAt(i)== '(')? i&1: 1- i&1;
+        }
+        return result;
+    }
+}
+
+// not bit manipulation
+class Solution {
+    public int[] maxDepthAfterSplit(String seq) {
+        int n = seq.length(), depth=0;
+        int[] result = new int[n];
+        for(int i=0; i<n; i++){
+            if(seq.charAt(i) == '(') depth++;
+            result[i] = depth%2;
+            if(seq.charAt(i) == ')') depth--;
+        }
+        return result;
+    }
+}
+// but here 
+// Accepted
+// Runtime: 0 ms
+// Your input
+// "(()())"
+// Output
+// [1,0,0,0,0,1]
+// Expected
+// [0,1,1,1,1,0]
