@@ -1,0 +1,13 @@
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        int sizeJ = J.length();
+        int sizeS = S.length();
+        int count = 0;
+        for(int i=0; i<sizeJ; i++){
+            for(int j=0; j<sizeS; j++){
+                if(J.charAt(i) == S.charAt(j)) count++;
+            }
+        }
+        return count;
+    }
+}
