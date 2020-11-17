@@ -29,7 +29,7 @@ class Result {
             if(pathArray[i] == 'U') count++;
             if(pathArray[i] == 'D') count--;
             if(i>0){
-                if(pathArray[i] == 'U'  && count==0){
+                if(pathArray[i] == 'U'  && count==0){ //only checked where finished
                     result++;
                 }
             }
